@@ -1,0 +1,48 @@
+POST http://localhost:3030/register
+Content-Type: application/json
+
+{
+  "name": "Anmol",
+  "username": "anmol",
+  "email": "anmol@example.com",
+  "password": "123456"
+}
+
+
+
+
+###
+POST http://localhost:3030/login HTTP/1.
+Content-Type: application/json
+
+{
+  "email": "anmol@example.com",
+  "password": "123456"
+}
+
+###
+POST http://localhost:3030/get_user_and_profile
+Content-Type: application/json
+
+{
+    "token": "3d6ab4d8ce9229fc31c638a16876b38fceff6aabd32f0bc44ec35bebd7e47dcc"
+}
+
+###
+POST http://localhost:3030/update_profile_data
+Content-Type: application/json
+
+{
+    "token": "3d6ab4d8ce9229fc31c638a16876b38fceff6aabd32f0bc44ec35bebd7e47dcc",
+  "bio": "",
+  "currentPost": "CTO",
+  "pastWork": [
+    {
+      "years": "2+"
+    }
+  ]
+}
+
+###
+
+GET  http://localhost:3030/user/get_all_users
